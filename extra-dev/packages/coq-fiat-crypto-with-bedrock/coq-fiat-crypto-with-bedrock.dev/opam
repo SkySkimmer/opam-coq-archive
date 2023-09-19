@@ -37,5 +37,5 @@ Target languages include C, Rust, Zig, Go, and bedrock2.
 """
 tags: ["logpath:Crypto"]
 url {
-  src: "git+https://github.com/mit-plv/fiat-crypto.git#master"
+  src: "git+https://github.com/SkySkimmer/fiat-crypto.git#sort-poly"
 }

@@ -19,5 +19,5 @@ dev-repo: "git+https://github.com/mit-plv/rewriter.git"
 synopsis: "Reflective PHOAS rewriting/pattern-matching-compilation framework for simply-typed equalities and let-lifting, experimental and tailored for use in Fiat Cryptography"
 tags: ["logpath:Rewriter"]
 url {
-  src: "git+https://github.com/mit-plv/rewriter.git#master"
+  src: "git+https://github.com/SkySkimmer/rewriter.git#sort-poly"
 }

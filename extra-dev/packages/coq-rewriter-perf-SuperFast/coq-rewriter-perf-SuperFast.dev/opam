@@ -20,5 +20,5 @@ depends: [
 dev-repo: "git+https://github.com/mit-plv/rewriter.git"
 synopsis: "Performance Benchmark for Reflective PHOAS rewriting/pattern-matching-compilation framework for simply-typed equalities and let-lifting"
 url {
-  src: "git+https://github.com/mit-plv/rewriter.git#master"
+  src: "git+https://github.com/skyskimmer/rewriter.git#sort-poly"
 }

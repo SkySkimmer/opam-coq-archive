@@ -47,5 +47,5 @@ Template Coq includes:
   MetaCoq/MTac.
 """
 url {
-  src: "git+https:///github.com/metacoq/metacoq.git#main"
+  src: "git+https:///github.com/skyskimmer/metacoq.git#sort-poly"
 }
