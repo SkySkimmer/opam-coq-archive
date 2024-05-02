@@ -37,5 +37,5 @@ numbers, or `{{A -> B}}` to the representation of a product by unfolding
 and
 new tactics."""
 url {
-  src: "git+https://github.com/LPCIC/coq-elpi.git#coq-master"
+  src: "git+https://github.com/skyskimmer/coq-elpi.git#qed-private-univs"
 }
