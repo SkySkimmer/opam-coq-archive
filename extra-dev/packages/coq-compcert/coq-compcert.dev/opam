@@ -44,5 +44,5 @@ tags: [
   "logpath:compcert"
 ]
 url {
-  src: "git+https://github.com/AbsInt/CompCert.git"
+  src: "git+https://github.com/skyskimmer/CompCert.git#make-timing-profiling"
 }
