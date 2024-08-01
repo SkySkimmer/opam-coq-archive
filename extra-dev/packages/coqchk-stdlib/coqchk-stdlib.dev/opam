@@ -1,0 +1,20 @@
+opam-version: "2.0"
+synopsis: "The Coq Proof Assistant"
+description: """
+Package for internal use in coq benchmarking."""
+maintainer: ["The Coq development team <coqdev@inria.fr>"]
+authors: ["The Coq development team, INRIA, CNRS, and contributors"]
+license: "LGPL-2.1-only"
+homepage: "https://coq.inria.fr/"
+doc: "https://coq.github.io/doc/"
+bug-reports: "https://github.com/coq/coq/issues"
+depends: [
+  "coq-core" {= version}
+  "coq-stdlib" {= version}
+]
+dev-repo: "git+https://github.com/coq/coq.git"
+build: [
+  [ "find" "%{lib}%/coq/theories" "-name" "*.vo" "-fprint0" "vofiles" ]
+  [ "sed" "-i.bak" "-z" "-e" "s|%{lib}%/coq/theories/|Coq.|" "-e" "s|/|.|g" "-e" "s/.vo$//" "vofiles" ]
+  [ "xargs" "-0" "--arg-file=vofiles" "coqchk" "-o" "-m" ]
+]
