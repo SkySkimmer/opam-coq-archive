@@ -1,0 +1,20 @@
+opam-version: "2.0"
+authors: [
+  "Google Inc."
+  "Massachusetts Institute of Technology"
+]
+maintainer: "Gaëtan Gilbert <gaetan.gilbert@inria.fr>"
+homepage: "https://github.com/mit-plv/rewriter"
+bug-reports: "https://github.com/mit-plv/rewriter/issues"
+license: "MIT OR Apache-2.0 OR BSD-1-Clause"
+build: [
+  [ "find" "%{lib}%/coq/user-contrib/Rewriter" "-name" "*.vo" "-fprint0" "vofiles" ]
+  [ "sed" "-i.bak" "-z" "-e" "s|%{lib}%/coq/user-contrib/||" "-e" "s|/|.|g" "-e" "s/.vo$//" "vofiles" ]
+  [ "xargs" "-0" "--arg-file=vofiles" "coqchk" "-o" "-m" ]
+]
+install: []
+depends: [
+  "coq-rewriter" {= version}
+]
+dev-repo: "git+https://github.com/mit-plv/rewriter.git"
+synopsis: "For internal coq benchmarking"

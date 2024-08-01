@@ -1,0 +1,19 @@
+opam-version: "2.0"
+maintainer: [ "Gaëtan Gilbert <gaetan.gilbert@inria.fr>" ]
+homepage: "http://homotopytypetheory.org/"
+bug-reports: "https://github.com/HoTT/Coq-HoTT/issues"
+license: "BSD-2-Clause"
+build: [
+  [ "coqchk" "-indices-matter" "-o" "-m" "HoTT.HoTT" ]
+]
+install: []
+depends: [
+  "coq-hott" {= version}
+  "coq-core" {= "dev"}
+]
+authors: ["The Coq-HoTT Development Team"]
+dev-repo: "git+https://github.com/HoTT/Coq-HoTT.git"
+synopsis: "The Homotopy Type Theory library"
+description: """
+For use in Coq benchmarking.
+"""
